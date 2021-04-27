@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="3_img/icon_title.png" type="image/png" />
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="2_css/index_style.css">
+    <link rel="stylesheet" type="text/css" href="2_css/index_media.css">
+    <title>Bioengineering</title>
+</head>
+<body>
+
+    <!--header-->
+    <header class="header">
+        <div class="container clearfix">
+            <nav role="navigation">
+                <div class="logo">
+                    <a href="index.html">Bioengineering</a>
+                </div>
+                <ul>
+                    <li><a href="#">About</a>
+                        <ul>
+                        <li>
+                            <a href="index.html">To the main</a>
+                        </li>
+                        <li>
+                            <a href="#" class="js-open-modal" data-modal="1">Development</a>
+                        </li>
+                        <li>
+                            <a href="#" class="js-open-modal" data-modal="2">Implantation</a>
+                        </li>
+                        <li>
+                            <a href="#" class="js-open-modal" data-modal="3">Side Projects</a>
+                        </li>
+                        <li>
+                            <a href="#" class="js-open-modal" data-modal="6">About US</a>
+                        </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="js-open-modal" data-modal="4">Community</a>
+                    </li>
+                    <li>
+                        <a href="#" class="js-open-modal" data-modal="5">Investors</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!--site_content-->
+    <section class="site_content">
+        <ul class="site_content_blocks">
+            <!--development.html-->
+            <li class="block visible_first">
+                <a href="#" class="js-open-modal" data-modal="1"> 
+                    <img src="3_img/development_first.jpg" alt="visible background" title="development" class="visible_background">
+                    
+                    <div class="block visible_second">
+                        <img src="3_img/development_second.jpg" alt="hover background" title="development" class="invisible_background">
+                    </div>
+                </a>
+
+                <h2 class="heading">Development</h2>
+                <p class="paragraph">
+                    <a href="#" class="js-open-modal" data-modal="1">development</a>
+                </p>
+            </li>
+
+            <!--modal window development-->
+            <div class="modal" data-modal="1">
+                <!--   Svg иконка для закрытия окна  -->
+                <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/>
+                </svg>
+
+                <iframe src="1_html/modal_development.html" width="100%" height="100%" frameborder="no" sandbox="allow-same-origin allow-scripts allow-forms" scrolling="auto"></iframe>
+            </div>
+
+            <!-- Подложка под модальным окном -->
+            <div class="overlay js-overlay-modal"></div>
+        
+
+            <!--implantation.html-->
+            <li class="block visible_first">
+                <a href="#" class="js-open-modal" data-modal="2">
+                    <img src="3_img/implantation_first.jpg" alt="visible background" title="bioengineering" class="visible_background">
+                    
+                    <div class="block visible_second">
+                        <img src="3_img/implantation_second.jpg" alt="hover background" title="bioengineering" class="invisible_background">
+                    </div>
+                </a>
+
+                <h2 class="heading">Bioengineering</h2>
+                <p class="paragraph">
+                    <a href="#" class="js-open-modal" data-modal="2">implantation</a>
+                </p>
+            </li>
+
+            <!--modal window implantation-->
+            <div class="modal" data-modal="2">
+                <!--   Svg иконка для закрытия окна  -->
+                <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/>
+                </svg>
+
+                <iframe src="1_html/modal_implantation.html" width="100%" height="100%" frameborder="no" sandbox="allow-same-origin allow-scripts allow-forms" scrolling="auto"></iframe>
+            </div>
+
+
+            <!--sideprojects.html-->
+            <li class="block visible_first">
+                <a href="#" class="js-open-modal" data-modal="3">
+                    <img src="3_img/sideprojects_first.jpg" alt="visible background" title="side projects" class="visible_background">
+                    
+                    <div class="block visible_second">
+                        <img src="3_img/sideprojects_second.jpg" alt="hover background" title="side projects" class="invisible_background">
+                    </div>
+                </a>
+
+                <h2 class="heading">Side Projects</h2>
+                <p class="paragraph side">
+                    <a href="#" class="js-open-modal" data-modal="3">side projects</a>
+                </p>
+            </li>
+
+            <!--modal window sideprojects-->
+            <div class="modal" data-modal="3">
+                <!--   Svg иконка для закрытия окна  -->
+                <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/>
+                </svg>
+
+                <iframe src="1_html/modal_sideprojects.html" width="100%" height="100%" frameborder="no" sandbox="allow-same-origin allow-scripts allow-forms" scrolling="auto"></iframe>
+            </div>
+
+
+            <!--socialcommunity.html-->
+            <li class="block visible_first">
+                <a href="#" class="js-open-modal" data-modal="4">
+                    <img src="3_img/socialcommunity_first.jpg" alt="visible background" title="community" class="visible_background">
+                    
+                    <div class="block visible_second visible_community">
+                        <img src="3_img/socialcommunity_second.png" alt="hover background" title="community" class="invisible_background">
+                    </div>
+                </a>
+
+                <h2 class="heading community">Community</h2>
+            </li>
+
+            <!--modal window socialcommunity-->
+            <div class="modal" data-modal="4">
+                <!--   Svg иконка для закрытия окна  -->
+                <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/>
+                </svg>
+
+                <iframe src="1_html/modal_socialcommunity.html" width="100%" height="100%" frameborder="no" sandbox="allow-same-origin allow-scripts allow-forms" scrolling="auto"></iframe>
+            </div>
+
+
+            <!--investor.html-->
+            <li class="block visible_first">
+                <a href="#" class="js-open-modal" data-modal="5">
+                    <img src="3_img/investor_first.jpg" alt="visible background"  title="investo" class="visible_background">
+                    
+                    <div class="block visible_second">
+                        <img src="3_img/investor_second.jpg" alt="hover background" title="investo" class="invisible_background">
+                    </div>
+                </a>
+
+                <h2 class="heading">Investor</h2>
+                <p class="paragraph investor">
+                    <a href="#" class="js-open-modal" data-modal="5">investor</a>
+                </p>
+            </li>
+
+            <!--modal window investor-->
+            <div class="modal" data-modal="5">
+                <!--   Svg иконка для закрытия окна  -->
+                <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/>
+                </svg>
+
+                <iframe src="1_html/modal_investor.html" width="100%" height="100%" frameborder="no" sandbox="allow-same-origin allow-scripts allow-forms" scrolling="auto"></iframe>
+            </div>
+
+
+            <!--about.html-->
+            <li class="block visible_first">
+                <a href="#" class="js-open-modal" data-modal="6">
+                    <img src="3_img/about_first.jpg" alt="visible background" title="about" class="visible_background">
+                    
+                    <div class="block visible_second visible_about">
+                        <img src="3_img/about_second.jpg" alt="hover background" title="about" class="invisible_background">
+                    </div>
+                </a>
+
+                <h2 class="heading about">About</h2>
+            </li>
+
+            <!--modal window about-->
+            <div class="modal" data-modal="6">
+                <!--   Svg иконка для закрытия окна  -->
+                <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/>
+                </svg>
+
+                <iframe src="1_html/modal_about.html" width="100%" height="100%" frameborder="no" sandbox="allow-same-origin allow-scripts allow-forms" scrolling="auto"></iframe>
+            </div>
+        </ul>
+    </section>
+
+    <!--footer-->
+    <footer class="footer">
+        <div class="container clearfix">
+            <div class="footer_content">
+                <div class="site_logo_footer">
+                    <p class="title_footer">made by:
+                        <a href="https://www.instagram.com/i.a.sidorenko/" class="IAS">Ivan SIDORENKO</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="4_js/modal_windows_index.js"></script>
+</body>
+</html>

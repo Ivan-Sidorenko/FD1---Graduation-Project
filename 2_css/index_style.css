@@ -1,0 +1,694 @@
+*, *:before, *:after{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+a{
+    text-decoration: none; 
+    color: inherit;
+}
+
+li{
+    list-style-type: none;
+}
+
+body{
+    font-family: 'Karla', sans-serif;
+    /*height: 10000px;*/
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.container{
+    width: 1700px;
+    margin: 0 auto;
+    /*border: 1px solid green;*/
+}
+
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/*header*/
+.header{
+    height: 85px;
+    background-color: #e6eaef99;
+} 
+
+.logo{
+    float: left;
+    font-size: 28px;
+    font-weight: bolder;
+    color: #000000;
+    text-transform: uppercase;
+    margin-top: 22px;
+}
+  
+.logo:hover{
+    color: #000000;
+    opacity: .8;
+}
+  
+/*header_navigation*/
+nav{
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+nav ul{
+    list-style: none;
+    position: relative;
+    float: right;
+    display: inline-table;
+}
+      
+nav ul li{
+    float: left;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    z-index: 5;
+}
+  
+nav ul li:hover{background: rgba(0,0,0,.15);}
+nav ul li:hover > ul{display: block; z-index: 5;}
+nav ul li{
+    float: left;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+        
+nav ul li a{
+    display: block;
+    height: 85px;
+    padding: 25px 20px;
+    color: #222;
+    font-size: 25px;
+    text-decoration: none;
+}
+        
+nav ul ul{
+    display: none;
+    background: #fff;
+    position: absolute; 
+    top: 100%;
+    box-shadow: -3px 3px 10px -2px rgba(0,0,0,.1);
+    border: 1px solid rgba(0,0,0,.1);
+}
+          
+nav ul ul li{
+    float: none; 
+    position: relative;
+}
+
+nav ul ul li a {
+    height: 60px;
+    padding: 15px 30px;
+    border-bottom: 1px solid rgba(0,0,0,.05);
+}
+            
+nav ul ul ul {
+    position: absolute; 
+    left: 100%; 
+    top:0;
+}
+
+/*site_content*/
+/*work with blocks (li)*/
+.site_content_blocks{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+}
+
+.block{
+    width: 33.33%;
+    background-color: #fff;
+}
+
+.visible_first{
+    position: relative;
+    overflow: hidden;
+}
+
+.visible_first:hover .visible_second{
+    opacity: 0.7;
+    transition: 1.2s;
+    transform: scale(1.1);
+    overflow: hidden;
+}
+
+.visible_background,
+.invisible_background{
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.visible_second{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 1.2s;
+}
+
+/*work with text (h2/p)*/
+.heading{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    text-transform: uppercase;
+    font-size: 26px;
+    color: #FFFFFF;
+    transition: 0.5s;
+    cursor: default;
+}
+
+.paragraph{
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    margin-left: -185px;
+    left: 50%;
+    font-size: 60px;
+    font-weight: bolder;
+    color: deeppink;
+    transition: 1.5s;
+    opacity: 0;
+}
+
+.visible_first:hover .heading{
+    opacity: 0;
+    transition: 1.2s;
+}
+
+.visible_first:hover .paragraph{
+    transition: 1.5s;
+    opacity: 1;
+    font-weight: bolder;
+}
+
+.side{
+    color: #000000;
+}
+
+.visible_first:hover .side{
+    transition: 1.5s;
+    opacity: 0.5;
+}
+
+.community{
+    color: #5BA4C7;
+}
+
+.visible_first:hover .visible_community{
+    opacity: 1;
+    transition: 2.5s;
+    transform: none;
+}
+
+.investor{
+    margin-left: -117px;
+}
+
+.about{
+    color: #0272BA;
+}
+
+.visible_first:hover .visible_about{
+    opacity: 1;
+}
+
+/*modal window*/
+.overlay{
+   
+    /* Скрываем подложку  */
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 20;
+    transition: .3s all;
+}
+
+ /* Стили для модальных окон */
+.modal{
+    opacity: 0;
+    visibility: hidden;
+    width: 70%;
+    height: 100%;
+    position: fixed;
+    top: 0%;
+    right: 0;
+    z-index: 30;
+    box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, .2);
+    text-align: center;
+    background-color: #fff;
+    transition: 0.3s all;
+}
+
+/* Контент модального окна*/
+.modal__title{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 40px 60px 16px 20px;
+}
+ 
+ /* Стили для активных классов подложки и окна */
+.modal.active,
+.overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+ 
+ /* Стили для кнопки закрытия */
+ .modal__cross{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 28px;
+    right: 40px;
+    fill: #444;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+ 
+.modal_header{
+    display: none;
+}
+
+/*modal_header*/
+.invisible_header{
+    display: none;
+}
+
+/*modal_development.html*/
+.container_DISPCIAU{
+    width: 85%;
+    margin: 0 auto;
+}
+
+.modal_heading{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.img_modal{
+    width: 100%;
+    height: auto;
+}
+
+.paragraph_title{
+    padding: 30px 20px;
+    font-size: 30px;
+}
+
+.paragraph_text{
+    padding: 20px;
+    font-size: 25px;
+    line-height: 1.5;
+}
+
+.summary {
+    padding: 10px 20px;
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.descriptive_paragraph_title{
+    padding-left: 20px;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.prosthesis_options{
+    display: flex;
+    padding: 30px;
+}
+
+.options{
+    width: 50%;
+    height: 420px;
+    position: relative;
+}
+
+.options_name{
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    position: absolute;
+    top: 0px;
+}
+
+.img_option{
+    width: 100%;
+    height: 100%;
+}
+
+.modal_heading_section{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.about_developing {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 45px 20px 25px 20px;
+}
+
+.paragraph_title_blockend {
+    padding: 30px 20px;
+    font-size: 30px;
+}
+
+/*modal_implantation.html*/
+.bionic_options{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+    padding: 20px;
+}
+
+.bionic_block{
+    width: 33.33%;
+}
+
+.implantation_title_blockend{
+    padding: 30px 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+/*modal_sideprojects.html*/
+.vertical{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+}
+
+.vertical_title{
+    width: 50%;
+    padding: 30px 20px 15px 20px;
+}
+
+.vertical_text{
+    line-height: 1.2;
+    font-size: 21px;
+}
+
+.title_vertical{
+    height: 75px;
+    line-height: 1;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/*modal_socialcommunity.html*/
+.socialcommunity_title_blockend{
+    margin: 20px;
+    font-size: 35px;
+    text-align: center;
+}
+
+.icons_social_community{
+    text-align: center;
+}
+
+.icons_social{
+    font-size: 80px;
+    margin: 0 10px 0px 10px;
+    transition: 0.7s;
+}
+
+.instagram:hover{
+    color: #FF0099;
+    transition: 0.7s;
+}
+
+.facebook:hover{
+    color: #3366FF;
+    transition: 0.7s;
+}
+
+.twitter:hover{
+    color: #0099FF;
+    transition: 0.7s;
+}
+
+.youtube:hover{
+    color: #FF0033;
+    transition: 0.7s;
+}
+
+/*sliders*/
+.slider{
+    position: relative;
+    overflow: hidden;
+    margin: 30px 0 0 0;
+}
+
+.slider_wrapper{
+    display: flex;
+    transition: transform 0.6s ease;
+}
+
+.slider_item{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.slider_img{
+    width: 100%;
+    height: 100%;
+}
+
+.slider_control{
+    position: absolute;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    color: #FFFFFF;
+    text-align: center;
+    opacity: 0.5;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.slider_control:hover,
+.slider_control:focus{
+    color: #CCCCCC;
+    text-decoration: none;
+    outline: 0;
+    opacity: 0.9;
+}
+
+.slider_control_left{
+    left: 40px;
+}
+
+.slider_control_right{
+    right: 40px;
+}
+
+.icons_left_right{
+    font-size: 40px;
+}
+
+.icons_left{
+    padding: 0px 5px 0 0;
+}
+
+.icons_right{
+    padding: 0 0 0px 5px;
+}
+
+.form{
+    padding: 40px;
+    background-color: #f6f7f8;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.we_wait{
+    text-align: center;
+    font-size: 30px;
+    margin: 20px 0 40px 0;
+}
+
+.how_can{
+    font-size: 23px;
+    margin: 0 0 15px 0;
+}
+
+.input_name,
+.input_city,
+.input_mail_phone{
+    width: 400px;
+    height: 45px;
+    border-radius: 12px;
+    border-color: yellowgreen;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    color: black;
+    opacity: 0.5;
+    margin-bottom: 30px;
+}
+
+label{
+    cursor: pointer;
+    position: relative;
+}
+
+label > input{
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 20px;
+}
+
+.checkbox{
+    position: absolute;
+    top: -10px;
+    left: 45px;
+    width: 200px;
+    font-size: 20px;
+}
+
+.submit {
+    width: 300px;
+    position: relative;
+    margin: 30px auto;
+}
+
+.submit input[type="submit"] {
+    display: none;
+}
+
+.submit input[type="submit"] + label {
+    display: block;
+    width: 300px;
+    height: 45px;
+    opacity: 0.5;
+    background-color: yellowgreen;
+    border-radius: 10px;
+}
+
+.submit_answer {
+    position: relative;
+    width: 90px;
+    height: 25px;
+    top: -38px;
+    left: 110px;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+/*modal_about.html*/
+.paragraph_option{
+    display: flex;
+    padding: 30px;
+}
+
+.option{
+    width: 50%;
+    height: auto;
+    position: relative;
+}
+
+.about_blockend{
+    background-color: #f6f7f8;
+}
+
+.about_title_blockend{
+    padding: 30px 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.about_team{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+}
+
+.person{
+    width: 33,33%;
+    height: auto;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.person_name, 
+.position{
+    text-align: center;
+    font-size: 35px;
+}
+
+.position{
+    font-size: 30px;
+}
+
+.social_footer{
+    background-color: #f6f7f8;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+/*footer*/
+.footer{
+    height: 70px;
+    background-color: #e6eaef99;
+}
+
+.footer_content{
+    padding: 25px 0 0 0;
+}
+
+.site_logo_footer{
+    float: left;
+    font-size: 25px;
+    font-weight: bolder;
+    color: #000000;
+}
+
+.title_footer{
+    color: darkslateblue;
+}
+
+.IAS:hover{
+    color: #000000;
+    opacity: .8;
+}

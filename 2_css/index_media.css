@@ -1,0 +1,531 @@
+@media all and (max-width: 1680px){
+	.container{
+		width: 1400px;
+    }
+
+    .paragraph{
+        top: 50%;
+        margin-top: -30px;
+        margin-left: -154px;
+        font-size: 50px;
+    }
+
+    .investor{
+        margin-left: -98px;
+    }
+
+    .modal_heading {
+        font-size: 25px;
+    }
+
+    .paragraph_title {
+        font-size: 25px;
+    }
+
+    .paragraph_text {
+        font-size: 20px;
+    }
+
+    .summary {
+        font-size: 20px;
+    }
+
+    .options {
+        height: 400px;
+    }
+
+    .modal_heading_section {
+        font-size: 25px;
+    }
+
+    .paragraph_title_blockend {
+        font-size: 25px;
+    }
+
+    .implantation_title_blockend {
+        padding: 25px 20px;
+        font-size: 25px;
+    }
+
+    .socialcommunity_title_blockend {
+        margin: 15px;
+        font-size: 30px;
+    }
+
+    .icons_social {
+        font-size: 75px;
+    }
+
+    .paragraph_option {
+        padding: 20px;
+    }
+
+    .person {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .person_name {
+        font-size: 30px;
+    }
+
+    .position {
+        font-size: 26px;
+    }
+}
+
+@media all and (max-width: 1366px){
+    .container{
+		width: 1100px;
+    }
+
+    .title_vertical {
+        font-size: 20px;
+    }
+
+    .vertical_title {
+        padding: 20px 10px 5px 20px;
+    }
+
+    .vertical_text {
+        line-height: 1.1;
+        font-size: 18px;
+    }
+
+    .socialcommunity_title_blockend {
+        font-size: 22px;
+    }
+
+    .icons_social {
+        font-size: 70px;
+    }
+
+    .we_wait {
+        font-size: 25px;
+    }
+
+    .how_can {
+        font-size: 22px;
+        margin: 0 0 10px 0;
+    }
+
+    .input_name, .input_city, 
+    .input_mail_phone {
+        margin-bottom: 20px;
+    }
+
+    .paragraph_option {
+        padding: 0px 20px;
+    }
+
+    .about_title_blockend {
+        padding: 20px 20px;
+        font-size: 25px;
+    }
+
+    .about_team {
+        justify-content: center;
+    }
+
+    .person {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media all and (max-width: 1150px){
+    .container{
+		width: 850px;
+    }
+
+    .header {
+        height: 75px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        padding: 20px 20px;
+        height: 75px;
+    }
+
+    nav ul ul li a {
+        height: 45px;
+        padding: 10px 25px;
+    }
+
+    .heading {
+        top: 30px;
+        left: 30px;
+        font-size: 20px;
+    }
+
+    .paragraph{
+        top: 50%;
+        margin-top: -20px;
+        margin-left: -110px;
+        font-size: 35px;
+    }
+
+    .investor{
+        margin-left: -68px;
+    }
+
+    .modal_heading {
+        font-size: 20px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .paragraph_title {
+        font-size: 20px;
+        padding: 15px 20px;
+    }
+
+    .paragraph_text {
+        font-size: 18px;
+        line-height: 1.2;
+        padding: 10px 20px;
+    }
+
+    .summary {
+        font-size: 18px;
+    }
+
+    .descriptive_paragraph_title {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .options {
+        height: auto;
+    }
+
+    .modal_heading_section {
+        font-size: 22px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .paragraph_title_blockend {
+        font-size: 22px;
+        padding: 20px 20px;
+    }
+
+    .implantation_title_blockend {
+        padding: 20px 20px;
+        font-size: 22px;
+    }
+
+    .vertical_title {
+        padding: 10px 5px 5px 20px;
+    }
+
+    .title_vertical {
+        font-size: 18px;
+    }
+
+    .vertical_text {
+        line-height: 1.2;
+        font-size: 16px;
+    }
+
+    .person_name {
+        font-size: 22px;
+    }
+
+    .position {
+        font-size: 20px;
+    }
+}
+
+@media all and (max-width: 950px){
+    .container{
+		width: 800px;
+    }
+
+    .block{
+        width: 50%;
+        background-color: #fff;
+    }
+    
+    .visible_first{
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .visible_first:hover .visible_second{
+        opacity: 0.7;
+        transition: 1.2s;
+        transform: scale(1.1);
+        overflow: hidden;
+    }
+    
+    .visible_background,
+    .invisible_background{
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .visible_second{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: 1.2s;
+    }
+
+    .paragraph {
+        margin-top: -26px;
+        margin-left: -141px;
+        font-size: 45px;
+    }
+
+    .investor{
+        margin-left: -88px;
+    }
+
+    .vertical {
+        display: flex;
+        justify-content: center;
+        flex-flow: wrap;
+    }
+
+    .vertical_title {
+        width: 100%;
+        padding: 10px 5px 5px 20px;
+    }
+
+    .title_vertical {
+        height: 55px;
+    }
+
+    .paragraph_option {
+        display: flex;
+        flex-flow: wrap;
+    }
+
+    .option {
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 850px){
+    .container{
+		width: 600px;
+    }
+
+    .modal{
+        width: 80%;
+    }
+}
+
+@media all and (max-width: 750px){
+    .container {
+        width: 310px;
+        text-align: center;
+    }
+
+    .header {
+        height: 100px;
+    }
+
+    .logo {
+        float: none;
+        padding-top: 20px;
+        font-size: 20px;
+        margin: 0;
+    }
+
+    nav ul {
+        float: none;
+    }
+
+    nav ul li a {
+        padding: 20px 10px;
+        height: 55px;
+    }
+
+    nav ul ul li a {
+        height: 45px;
+        padding: 10px 20px;
+    }
+
+    .site_logo_footer {
+        font-size: 22px;
+    }
+
+    .modal{
+        width: 85%;
+    }
+
+    .paragraph {
+        margin-top: -20px;
+        margin-left: -110px;
+        font-size: 35px;
+    }
+
+    .investor{
+        margin-left: -68px;
+    }
+
+    .modal_heading {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    .paragraph_text {
+        font-size: 16px;
+        line-height: 1;
+        padding: 5px 20px;
+    }
+
+    .summary {
+        font-size: 16px;
+    }
+
+    .implantation_title_blockend {
+        padding: 15px 20px;
+        font-size: 20px;
+    }
+
+    .socialcommunity_title_blockend {
+        font-size: 20px;
+    }
+
+    .icons_social {
+        font-size: 60px;
+    }
+
+    .socialcommunity_title_blockend {
+        margin: 5px;
+        font-size: 20px;
+    }
+
+    .form {
+        padding: 25px;
+    }
+
+    .we_wait {
+        font-size: 22px;
+    }
+
+    .how_can {
+        font-size: 20px;
+    }
+
+    .input_name, .input_city, .input_mail_phone {
+        width: 300px;
+        height: 35px;
+        padding: 5px;
+        font-size: 15px;
+    }
+}
+
+@media all and (max-width: 650px){
+    .block{
+        width: 100%;
+        background-color: #fff;
+    }
+    
+    .visible_first{
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .visible_first:hover .visible_second{
+        opacity: 0.7;
+        transition: 1.2s;
+        transform: scale(1.1);
+        overflow: hidden;
+    }
+    
+    .visible_background,
+    .invisible_background{
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .visible_second{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: 1.2s;
+    }
+
+    .heading {
+        font-size: 25px;
+    }
+
+    .modal{
+        width: 97%;
+    }
+
+    .paragraph {
+        margin-top: -32px;
+        margin-left: -173px;
+        font-size: 55px;
+    }
+
+    .investor{
+        margin-left: -107px;
+    }
+}
+
+@media all and (max-width: 500px){
+    .bionic_options {
+        justify-content: center;
+    }
+
+    .bionic_block {
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 470px){
+    .paragraph {
+        margin-top: -24px;
+        margin-left: -126px;
+        font-size: 40px;
+    }
+
+    .investor{
+        margin-left: -78px;
+    }
+
+    .prosthesis_options {
+        display: flex;
+        justify-content: center;
+        flex-flow: wrap;
+    }
+
+    .options {
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 375px){
+    .title_vertical {
+        height: 75px;
+    }
+
+    .icons_social {
+        font-size: 40px;
+    }
+
+    .form {
+        padding: 5px;
+    }
+}
