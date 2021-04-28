@@ -1,2 +1,2 @@
 # FD1---Graduation-Project
-Creating a final project using grid layout in css
+The site is written using flex layout
